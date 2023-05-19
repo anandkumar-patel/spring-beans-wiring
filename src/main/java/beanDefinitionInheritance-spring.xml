@@ -1,40 +1,46 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
- xmlns:context="http://www.springframework.org/schema/context"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
  http://www.springframework.org/schema/beans
  http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
  http://www.springframework.org/schema/context
  http://www.springframework.org/schema/context/spring-context-4.3.xsd">
- 
- 	<bean id="baseTriangle" class="anand.learn.beans.Triangle" abstract="true">
- 		<property name="pointA" ref="zeroPoint"></property>
- 	</bean>
- 	
- 	<bean id="triangle1" class="anand.learn.beans.Triangle" parent="baseTriangle">
- 		<property name="pointB" ref="xPoint"></property>
- 		<property name="pointC" ref="yPoint"></property>
- 	</bean>
- 	
- 	<bean id="triangle2" class="anand.learn.beans.Triangle" parent="baseTriangle">
- 		<property name="pointB" ref="xPoint1"></property>
- 		<property name="pointC" ref="yPoint"></property>
- 	</bean>
- 
- 	<bean id="zeroPoint" class="anand.learn.beans.Point">
- 		<property name="x" value="0"></property>
- 		<property name="y" value="0"></property>
- 	</bean> 
- 	<bean id="xPoint" class="anand.learn.beans.Point">
- 		<property name="x" value="10"></property>
- 		<property name="y" value="0"></property>
- 	</bean> 
- 	<bean id="xPoint1" class="anand.learn.beans.Point">
- 		<property name="x" value="15"></property>
- 		<property name="y" value="0"></property>
- 	</bean> 
- 	<bean id="yPoint" class="anand.learn.beans.Point">
- 		<property name="x" value="0"></property>
- 		<property name="y" value="10"></property>
- 	</bean> 
- </beans>
+
+	<bean id="baseTriangle" class="anand.learn.beans.Triangle"
+		abstract="true">
+		<property name="pointA" ref="zeroPoint"></property>
+	</bean>
+
+	<bean id="triangle1" class="anand.learn.beans.Triangle" parent="baseTriangle">
+		<property name="pointB" ref="x-axisPoint"></property>
+		<property name="pointC" ref="y-axisPoint"></property>
+	</bean>
+
+	<bean id="triangle2" class="anand.learn.beans.Triangle" parent="baseTriangle">
+		<property name="pointB" ref="x-axisPoint1"></property>
+		<property name="pointC" ref="y-axisPoint1"></property>
+	</bean>
+
+	<bean id="zeroPoint" class="anand.learn.beans.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	<bean id="x-axisPoint" class="anand.learn.beans.Point">
+		<property name="x" value="10"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	<bean id="y-axisPoint" class="anand.learn.beans.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="10"></property>
+	</bean>
+
+	<bean id="x-axisPoint1" class="anand.learn.beans.Point">
+		<property name="x" value="15"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	<bean id="y-axisPoint1" class="anand.learn.beans.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="15"></property>
+	</bean>
+</beans>
