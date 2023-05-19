@@ -3,7 +3,6 @@ package anand.learn.bean_scope;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import anand.learn.beans.Point;
 import anand.learn.beans.Triangle;
 
 public class DrawingApp {

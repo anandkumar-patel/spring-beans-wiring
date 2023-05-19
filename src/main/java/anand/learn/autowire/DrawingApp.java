@@ -22,10 +22,15 @@ public class DrawingApp {
 		Triangle triangle=(Triangle)factory.getBean("triangle");
 		triangle.draw();
 		
-		System.out.println("------------Constructor autowire--------------");
+		System.out.println("------------byType autowire--------------");
 		Circle circle = (Circle)factory.getBean("circle");
 		circle.draw();
-       
+		
+		System.out.println("------------Constructor autowire--------------");
+		Employee employee = (Employee)factory.getBean("employee");
+		System.out.println("Hello .."+employee.getFullName()+" your department is "+employee.getDepartment().getName());
+		
+		
 	}
 
 }

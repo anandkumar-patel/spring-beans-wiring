@@ -35,7 +35,7 @@
         <property name="fullName" value="Anand Patel"/> 
     </bean>
   
-    <bean id="department" class="anand.learn.beans.Department" >
+    <bean id="department1" class="anand.learn.beans.Department" >
         <property name="name" value="Engineering Team1" />
     </bean>
     <bean id="department2" class="anand.learn.beans.Department" >
@@ -44,7 +44,7 @@
     
     <bean id="circle" class="anand.learn.beans.Circle" autowire="byType"/>
  
- 	<bean id="center" class="anand.learn.beans.Point">
+ 	<bean id="point" class="anand.learn.beans.Point">
  		<property name="x" value="10"></property>
  		<property name="y" value="10"></property>
  	</bean> 

@@ -1,8 +1,13 @@
 package anand.learn.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 public class Employee {
 	private String fullName;
 	
+	@Autowired
+	@Qualifier("department2")
 	private Department department;
 
 	public Employee(Department department) {
@@ -15,7 +20,7 @@ public class Employee {
 		System.out.println("Employee class default constructor called");
 	}
 
-	public Department getDepartmentBean() {
+	public Department getDepartment() {
 		return department;
 	}
 
