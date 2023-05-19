@@ -1,0 +1,19 @@
+Scope of Beans :
+1-Singleton scope:
+	By default beans scope is Singleton, means one bean instance per bean definition,
+	no matter how may call happens using getBean(). 
+2-Prototype scope:
+	New bean is create with every request or reference, means when we declare a beans 
+	scope as prototype, then that bean is going to create new instance 
+	at every request/reference.
+
+
+
+NOTE: if parent bean's scope is prototype and it's dependent bean's scope is singleton then while creating
+ApplicationContext instance, it will create all dependent bean which are singleton.
+And when a request is  for creating parent bean then all created dependent bean is just passed to it. because 
+dependent beans scope are singleton.
+
+NOTE: if parent bean's scope is singleton and it's dependent bean's scope is prototype then while creating
+ApplicationContext instance, it will create parent bean and all it's dependent bean without bothering that
+it's dependent beans scope is prototype.
